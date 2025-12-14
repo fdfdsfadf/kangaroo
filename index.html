@@ -36,15 +36,19 @@
       height: 100vh;
       overflow: hidden;
       background: #000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
     iframe {
       width: 100vw;
       height: 100vh;
       border: none;
       allowfullscreen: true;
+      height: -webkit-fill-available;
+    }
+    
+    @supports (height: 100dvh) {
+      .container {
+        height: 100dvh;
+      }
     }
   </style>
 </head>
